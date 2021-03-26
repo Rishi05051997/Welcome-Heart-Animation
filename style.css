@@ -1,0 +1,119 @@
+body {
+    margin: 20px;
+    background: linear-gradient(red,purple,grey);
+    font-family: Helvetica, sans-serif;
+}
+
+h1 {
+    color: rgba(235, 231, 15, 0.89);
+    text-align: center;
+    text-shadow: 3px 3px 30px orange,
+       		     6px 6px 10px blue;
+}
+h1:hover {
+    color: silver;
+}
+
+.container {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.preloader {
+    animation:rotate 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+
+}
+@keyframes rotate {
+    50% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(720deg);
+    }
+    
+}
+
+.preloader span{
+    height: 150px;
+    width: 150px;
+    display:block;
+    position: absolute;
+    background: #3fc1f2;
+    border: 1px solid #3fc1f2;
+    border-radius: 100%;
+}
+
+
+
+@keyframes shape_1 {
+    60% {
+        transform: scale(0.4);
+    }
+}
+
+
+.preloader span:nth-child(1) {
+    transform: translate(-50px, -50px);
+    animation: shape_1 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+
+}
+
+@keyframes shape_2 {
+    40% {
+        transform: scale(0.4);
+    }
+}
+
+
+
+.preloader span:nth-child(2) {
+    transform: translate(50px, -50px);
+    animation: shape_2 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite;
+}
+
+.preloader span:nth-child(3) {
+    position: relative;
+    border-radius: 0px;
+    transform: scale(0.981.0) rotate(-45deg);
+    border-color:  #3fc1f2;
+    border-radius: 0px;
+    background:#3fc1f2 ;
+    animation: shape_3 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite ;
+}
+@keyframes shape_3 {
+    40% {
+        border-radius: 100%;
+        transform: scale(0.5) rotate(-45deg);
+    }
+    100% {
+        
+        transform: scale(0.98) rotate(-45deg);
+    }
+}
+
+.container .shadow {
+    position: relative;
+    display: block;
+    height: 54px;
+    width: 150px;
+    background: #d9d9d9;
+    border: 1px solid #d9d9d9;
+    border-radius: 50%;
+    top: 30px;
+    animation: shadow 2.3s cubic-bezier(0.75, 0, 0.5, 1) infinite ;
+}
+
+@keyframes shadow {
+    50% {
+        border-color: #f2f2f2;
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(0.5); rotate: (-45deg);
+    }
+    
+    
+}
+
